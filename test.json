@@ -1,0 +1,24 @@
+{
+ "offices": [
+  {
+   "officeCode": "2",
+   "officeName": "Agro",
+   "City": "Colombo",
+   "Phone": "0112255465",
+   "address": "No.456",
+   "postalCode": "70200",
+   "street": "2nd lane",
+   "country": "Sri Lanka"
+  },
+  {
+   "officeCode": "1",
+   "officeName": "Zense",
+   "City": "Mathra",
+   "Phone": "0452255465",
+   "address": "No.211",
+   "postalCode": "4526568",
+   "street": "5th lane",
+   "country": "London"
+  }
+ ]
+}

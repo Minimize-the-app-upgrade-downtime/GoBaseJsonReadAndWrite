@@ -1,0 +1,20 @@
+{
+ "employees": [
+  {
+   "employeeNumber": 12,
+   "firstName": "John",
+   "lastName": "Deo",
+   "officeCode": "2",
+   "jobTitle": "Doctor",
+   "phoneNumber": "021000000"
+  },
+  {
+   "employeeNumber": 11,
+   "firstName": "Shashi",
+   "lastName": "Mash",
+   "officeCode": "5",
+   "jobTitle": "SE",
+   "phoneNumber": "021000000"
+  }
+ ]
+}
