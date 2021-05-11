@@ -4,6 +4,7 @@
    "employeeNumber": 12,
    "firstName": "John",
    "lastName": "Deo",
+   "email": "deo@gmail.com",
    "officeCode": "2",
    "jobTitle": "Doctor",
    "phoneNumber": "021000000"
@@ -12,6 +13,7 @@
    "employeeNumber": 11,
    "firstName": "Shashi",
    "lastName": "Mash",
+   "email": "mash@gmail.com",
    "officeCode": "5",
    "jobTitle": "SE",
    "phoneNumber": "021000000"

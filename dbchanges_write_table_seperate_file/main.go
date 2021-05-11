@@ -35,7 +35,7 @@ type employee struct{
 	EmployeeNumber  int `json:"employeeNumber,omitempty",`
 	FirstName  string `json:"firstName,omitempty",`
 	LastName  string `json:"lastName,omitempty",`
-	email  string `json:"email,omitempty",`
+	Email  string `json:"email,omitempty",`
 	OfficeCode  string `json:"officeCode,omitempty",`
 	JobTitle  string `json:"jobTitle,omitempty",`
 	PhoneNumber  string `json:"phoneNumber,omitempty",`
@@ -67,7 +67,7 @@ func main(){
 		}  
 		fmt.Println(office)
 		file, _ := json.MarshalIndent(office, "", " ")
-		 _ = ioutil.WriteFile("test.json", file, 0644)
+		 _ = ioutil.WriteFile("office.json", file, 0644)
 	}
 
 	// employ obj
@@ -77,7 +77,7 @@ func main(){
         employee.Employees[i].PhoneNumber = "021000000"  // add defult value
 		//fmt.Println(emp)
 		file, _ := json.MarshalIndent(employee, "", " ")
-		_ = ioutil.WriteFile("test1.json", file, 0644)
+		_ = ioutil.WriteFile("employee.json", file, 0644)
 	}
 
 		
