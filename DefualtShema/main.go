@@ -50,15 +50,7 @@ func changeRequestForUpdatedVersion(w http.ResponseWriter, r *http.Request){
 	if err != nil{
 		panic(err)
 	}
-	log.Println("Apply DB changes Shcema for POST Request")
-	// apply schema changes 
-	db.Address = db.AddressLine1
-	db.AddressLine1 = ""
-	db.AddressLine2 = ""
-	
-	db.PhoneNumber = "0710000000"
-	pc := db.PostalCode  // change shema bind the value
-	db.PostalCode = pc
+	log.Println("Apply Default Shcema for POST Request")
 	
 	//Marshal or convert user object back to json and write to response 
 	dbJson, err := json.Marshal(db)
@@ -75,10 +67,8 @@ func changeRequestForUpdatedVersion(w http.ResponseWriter, r *http.Request){
 
 	if err != nil {
 		log.Fatalf("An Error Occured %v", err)
-	 }
-	 defer resp.Body.Close()
-
-	
+	}
+	defer resp.Body.Close()
 
 	
 }
