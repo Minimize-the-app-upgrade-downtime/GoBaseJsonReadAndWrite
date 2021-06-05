@@ -3,9 +3,9 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
-	
 )
 
 //User defines model for storing account details in database
@@ -33,6 +33,7 @@ type db_field struct {
 }
 
 func main(){
+	fmt.Println("Schema Change up")
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", changeRequestForUpdatedVersion)
@@ -44,10 +45,14 @@ func changeRequestForUpdatedVersion(w http.ResponseWriter, r *http.Request){
 	log.Println("POST request received from localhost:50000")
 	db := db_field{} //initialize 
 
-	// log.Println(r)
+	//log.Println(r)
+
+	//log.Println(r.Body)
 	//Parse json request body and use it to set fields on db
 	err := json.NewDecoder(r.Body).Decode(&db)
 	
+	fmt.Println(db)
+
 	if err != nil{
 		panic(err)
 	}
@@ -78,8 +83,5 @@ func changeRequestForUpdatedVersion(w http.ResponseWriter, r *http.Request){
 		log.Fatalf("An Error Occured %v", err)
 	 }
 	 defer resp.Body.Close()
-
-	
-
 	
 }
